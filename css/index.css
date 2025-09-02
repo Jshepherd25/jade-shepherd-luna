@@ -1,0 +1,75 @@
+.body {
+    background-color: #5e7256;
+    background-image: url("https://images.unsplash.com/photo-1511207538754-e8555f2bc187?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9yZXN0JTIwZ3JlZW58ZW58MHx8MHx8fDA%3D");
+    background-blend-mode: multiply;
+    background-size: auto;
+    
+}
+
+#About, #Experience, #Connect {
+    color: white;
+    background-color:hsl(108, 16%, 50%);
+    border: 2px solid rgb(153, 187, 147);
+    box-shadow: 
+    0 0 20px rgb(250, 250, 249),
+    0 0 30px rgb(54, 77, 54),
+    0 0 80px rgb(248, 248, 248);
+    font-family: "Asimovian", sans-serif;
+    text-align: center;
+}
+
+#About, #Experience {
+    padding: 15px;
+    margin: 30px auto;
+    width: 60%;
+}
+
+#Connect {
+    padding: 15px;
+    margin: 10px auto;
+    width: 20%;
+}
+   
+.heading-one {
+    color: rgb(127, 167, 127);
+    font-family: "Asimovian", sans-serif;
+    border-color: white;
+    text-align: center;
+    text-shadow: -15px 20px 20px #fff, 0 0 30px #fff;
+}
+.heading-two {
+    background-color: rgb(66, 88, 57);
+    font-size: 20px;
+    font-weight: 200px;
+}
+
+.no-bullets {
+    list-style-type: none;
+}
+
+#Experience .no-bullets li {
+    background-color: rgb(87, 105, 80);
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px white, 0 0 30px rgb(56, 77, 59), 0 0 40px white;    
+}
+#Connect i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin:10px 15px; 
+    padding:30px 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px; 
+    background-color:rgb(64, 83, 57);
+    color: white;
+    box-shadow: 
+    0 0 20px rgb(120, 180, 120),
+    0 0 30px rgb(251, 252, 251),
+    0 0 80px rgb(160, 240, 160);   
+}

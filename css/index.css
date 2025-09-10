@@ -3,73 +3,159 @@
     background-image: url("https://images.unsplash.com/photo-1511207538754-e8555f2bc187?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9yZXN0JTIwZ3JlZW58ZW58MHx8MHx8fDA%3D");
     background-blend-mode: multiply;
     background-size: auto;
-    
+    font-family: "Asimovian", sans-serif;
 }
 
-#About, #Experience, #Connect {
+.navigation-bar {
+    border: 5px solid #BF9264;
+    box-shadow: 0px 0px 15px #ffffff;
+    border-radius: 10px;
+    background-color: #6F826A;
+    display: flex;
+    padding: 30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navigation-bar a {
+    background-color: #BF9264;
+    border-radius: 50px;
+    padding: 15px;
     color: white;
-    background-color:hsl(108, 16%, 50%);
-    border: 2px solid rgb(153, 187, 147);
-    box-shadow: 
-    0 0 20px rgb(250, 250, 249),
-    0 0 30px rgb(54, 77, 54),
-    0 0 80px rgb(248, 248, 248);
+}
+
+.main-header {
+    position: fixed;
+    top: auto;
+    z-index: 1000;
+
+}
+#About, #Experience, #Skills, #Projects, #Connect {
+    color: white;
+    
+    border: 5px solid #BF9264;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(250, 250, 249), 0 0 10px rgb(54, 77, 54), 0 0 20px rgb(248, 248, 248);
     font-family: "Asimovian", sans-serif;
     text-align: center;
 }
 
-#About, #Experience {
+#About, #Experience, #Skills, #Projects {
     padding: 15px;
     margin: 30px auto;
     width: 60%;
 }
 
+
 #Connect {
     padding: 15px;
-    margin: 10px auto;
-    width: 20%;
-}
-   
-.heading-one {
-    color: rgb(127, 167, 127);
-    font-family: "Asimovian", sans-serif;
-    border-color: white;
-    text-align: center;
-    text-shadow: -15px 20px 20px #fff, 0 0 30px #fff;
-}
-.heading-two {
-    background-color: rgb(66, 88, 57);
-    font-size: 20px;
-    font-weight: 200px;
+    margin: 50px auto;
+    width: 40%;
 }
 
+.heading-one {
+    color: #F0F1C5;
+    border-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 70px;
+    text-shadow: 0px 0px 10px #fff;
+}
+
+.my-title{
+  text-align: center;
+    color: #BF9264;
+    text-shadow: -5px 0px 5px #fff;
+    font-size: 40px;
+}
+.heading-two {
+    background-color: #BBD8A3;
+    color: #F0F1C5;
+    border-radius: 10px;
+    width: 50%;
+    margin: 10px auto;
+    font-size: 50px; 
+    font-weight: 200px;
+    text-shadow: -5px 0px 5px #1b2618;
+    text-align: center;
+    text-decoration: underline #F0F1C5;
+}
+
+.heading-three {
+  display: flex;
+  color: #F0F1C5;
+  width: 50%;
+  text-decoration: underline #F0F1C5;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.heading-four {
+  display: flex;
+  background-color: #BF9264;
+  color: #F0F1C5;
+  flex-direction: row;
+  border: 2px solid #ECDFCC;
+  padding: 20px;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
+  font-size: 18px;
+}
+
+.exp-subtitle, .heading-five {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+.exp-dates, .exp-company {
+  background-color: #F0F1C5;
+  color: #BF9264;
+  padding: 10px;
+  border: 2px solid #F0F1C5;
+}
+
+.exp-desc {
+  display: flex;
+  border: 2px solid black;
+  color: #BF9264;
+  background-color: #F0F1C5;
+  padding: 10px;
+  font-size: 18px;
+}
 .no-bullets {
     list-style-type: none;
 }
 
 #Experience .no-bullets li {
-    background-color: rgb(87, 105, 80);
+    background-color: #6F826A;
+    border-radius: 10px;
     margin-left: 150px;
     margin-right: 150px;
     margin-top: 10px;
     padding: 30px;
-    box-shadow: 0 0 10px white, 0 0 30px rgb(56, 77, 59), 0 0 40px white;    
+    box-shadow: 0 0 5px white, 0 0 10px rgb(56, 77, 59), 0 0 20px white;    
 }
 #Connect i {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 20px;
     height: 20px;
     margin:10px 15px; 
     padding:30px 30px;
     border-radius: 50%;
-    color: white;
     font-size: 20px; 
-    background-color:rgb(64, 83, 57);
+    background-color: #927357;
     color: white;
-    box-shadow: 
-    0 0 20px rgb(120, 180, 120),
-    0 0 30px rgb(251, 252, 251),
-    0 0 80px rgb(160, 240, 160);   
+    box-shadow: 0 0 30px rgb(251, 252, 251); 
+}
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 20px;
 }

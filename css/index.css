@@ -1,81 +1,89 @@
-.body {
-    background-color: #5e7256;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+ }
+ body {
+    background-color: #ffffff;
     background-image: url("https://images.unsplash.com/photo-1511207538754-e8555f2bc187?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9yZXN0JTIwZ3JlZW58ZW58MHx8MHx8fDA%3D");
     background-blend-mode: multiply;
     background-size: auto;
     font-family: "Asimovian", sans-serif;
+    margin: 0px; 
+    font-size: 100%;
+    text-align: center;  
 }
-
+.container {
+    margin: 10px auto;
+    max-width: 980px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .navigation-bar {
     border: 5px solid #BF9264;
     box-shadow: 0px 0px 15px #ffffff;
     border-radius: 10px;
     background-color: #6F826A;
     display: flex;
-    padding: 30px;
-    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: .5rem 0;
+    margin: 1rem;
+    flex-direction: column;
     justify-content: space-evenly;
 }
 
 .navigation-bar a {
     background-color: #BF9264;
     border-radius: 50px;
-    padding: 15px;
+    padding: .25rem;
+    margin: 0;
+    font-size: 1rem;
     color: white;
+    
 }
 
 .main-header {
-    position: fixed;
-    top: auto;
+    position: sticky;
+    font-size: 1rem;
+    top: 0; left: 0; right: 0;
     z-index: 1000;
-
 }
+
 #About, #Experience, #Skills, #Projects, #Connect {
     color: white;
-    
     border: 5px solid #BF9264;
     border-radius: 10px;
     box-shadow: 0 0 5px rgb(250, 250, 249), 0 0 10px rgb(54, 77, 54), 0 0 20px rgb(248, 248, 248);
+    margin: 1.5rem;
     font-family: "Asimovian", sans-serif;
-    text-align: center;
-}
-
-#About, #Experience, #Skills, #Projects {
-    padding: 15px;
-    margin: 30px auto;
-    width: 60%;
-}
-
-
-#Connect {
-    padding: 15px;
-    margin: 50px auto;
-    width: 40%;
+    padding: 1rem;  
 }
 
 .heading-one {
     color: #F0F1C5;
-    border-color: white;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 70px;
-    text-shadow: 0px 0px 10px #fff;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    text-shadow: -4px 0px 0px #6F826A;
 }
 
 .my-title{
-  text-align: center;
     color: #BF9264;
-    text-shadow: -5px 0px 5px #fff;
-    font-size: 40px;
+    text-shadow: -4px 0px 0px #6F826A;
+    font-size: 1.75rem;
+    padding: 1rem;
 }
 .heading-two {
     background-color: #BBD8A3;
     color: #F0F1C5;
     border-radius: 10px;
-    width: 50%;
-    margin: 10px auto;
-    font-size: 50px; 
-    font-weight: 200px;
+    width: 100%;
+    margin: 1.5rem auto;
+    font-size: 2rem; 
+    font-weight: 200;
     text-shadow: -5px 0px 5px #1b2618;
     text-align: center;
     text-decoration: underline #F0F1C5;
@@ -84,10 +92,11 @@
 .heading-three {
   display: flex;
   color: #F0F1C5;
-  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem;
   text-decoration: underline #F0F1C5;
   flex-direction: column;
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 .heading-four {
@@ -96,25 +105,27 @@
   color: #F0F1C5;
   flex-direction: row;
   border: 2px solid #ECDFCC;
-  padding: 20px;
-  width: 50%;
+  margin: 1rem;
+  padding: 1rem;
   justify-content: space-around;
   align-items: center;
-  margin: 10px auto;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .exp-subtitle, .heading-five {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  font-size: 18px;
+  padding: .5rem;
+  margin: .5rem auto;
+  font-size: 1rem;
 }
 
 .exp-dates, .exp-company {
   background-color: #F0F1C5;
   color: #BF9264;
-  padding: 10px;
+  padding: 1rem;
+  margin: 1rem; 
   border: 2px solid #F0F1C5;
 }
 
@@ -123,32 +134,32 @@
   border: 2px solid black;
   color: #BF9264;
   background-color: #F0F1C5;
-  padding: 10px;
-  font-size: 18px;
+  padding: 1rem;
+  margin: 1rem .5rem;
+  font-size: 1rem;
 }
 .no-bullets {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #Experience .no-bullets li {
     background-color: #6F826A;
     border-radius: 10px;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 10px;
-    padding: 30px;
+    margin: 1rem 0;
+    padding: .5rem;
     box-shadow: 0 0 5px white, 0 0 10px rgb(56, 77, 59), 0 0 20px white;    
 }
 #Connect i {
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 20px;
-    height: 20px;
-    margin:10px 15px; 
-    padding:30px 30px;
-    border-radius: 50%;
-    font-size: 20px; 
+    margin: .5rem auto; 
+    width: 56px;
+    height: 56px;
+    padding: 0px;
+    font-size: 1.25rem; 
     background-color: #927357;
     color: white;
     box-shadow: 0 0 30px rgb(251, 252, 251); 
@@ -156,6 +167,62 @@
 .contact {
     display: flex;
     justify-content: space-evenly;
-    padding: 10px;
-    gap: 20px;
+    padding: 1rem;
+    gap: 10px
+}
+
+
+/*Tablet Query*/
+
+@media (min-width: 48rem) {
+    body {
+        padding-top: 10px;
+    }
+    .navigation-bar {
+        position: fixed;
+        top: 0;
+        padding: 1rem 0;
+        flex-direction: row; 
+    }
+    .navigation-bar a {
+    padding: .5rem;
+    margin: 1rem;
+    font-size: 1rem;
+    color: white;    
+    }
+    .heading-one {
+        font-size: 3rem;
+        text-shadow: -5px 0px 0px #407c31; 
+    }
+    .heading-two{
+        font-size: 2.75rem;
+        text-shadow: -5px 0px 0px #407c31; 
+    }
+
+}
+
+/*Desktop Query*/
+
+@media (min-width: 64rem) {
+      .heading-one {
+        font-size: 5rem;
+    }
+    .heading-two{
+        font-size: 4.75rem;
+    }
+    .exp-subtitle, .heading-five {   
+        flex-direction: row;
+        justify-content: space-evenly;
+    }   
+    .heading-three {
+        text-align: left;
+        padding: 1.5rem;
+    } 
+    #Connect i {
+    width: 72px;
+    height: 72px;
+    padding: 1rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+}
 }

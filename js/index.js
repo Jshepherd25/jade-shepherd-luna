@@ -1,26 +1,61 @@
-//Footer
+// Footer
 const today = new Date();
 const thisYear = today.getFullYear();
 
-//Make a footer and put it at the end of the body
 const footer = document.createElement('footer');
 footer.setAttribute('aria-label', 'Site footer');
 document.body.appendChild(footer);
 
-//Create a Copyright
 const copyright = document.createElement('p');
 copyright.innerHTML = `&copy; ${thisYear} Jade Shepherd`;
 footer.appendChild(copyright);
 
-//Skills
+// Skills
 const skills = [
-    "Logo Design", "Creative Marketing & Outreach", "Javascript", "HTML", "CSS", "Git & Github", "Canva", "Email Marketing", "Brand Strategy",
+  "Logo Design", "Creative Marketing & Outreach", "Javascript", "HTML", "CSS",
+  "Git & Github", "Canva", "Email Marketing", "Brand Strategy"
 ];
 const skillsSection = document.querySelector('#Skills');
 let skillsList = skillsSection.querySelector('ul');
 
-for (let i=0; i < skills.length; i++) {
-    const li = document.createElement('li');
-    li.textContent = skills[i];
-    skillsList.appendChild(li);
+for (let i = 0; i < skills.length; i++) {
+  const li = document.createElement('li');
+  li.textContent = skills[i];
+  skillsList.appendChild(li);
 }
+
+// Handle Message Form Submit
+const messageForm = document.forms['leave_message'];
+
+messageForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const usersName = event.target.usersName.value;
+  const usersEmail = event.target.usersEmail.value;
+  const usersMessage = event.target.usersMessage.value;
+
+  console.log(usersName, usersEmail, usersMessage);
+
+  const messageSection = document.querySelector('#messages');
+  const messageList = messageSection.querySelector('ul');
+
+  const newMessage = document.createElement('li');
+  newMessage.innerHTML = `
+    <a href="mailto:${usersEmail}">${usersName}</a>: 
+    <span>${usersMessage}</span>
+  `;
+
+  const removeButton = document.createElement('button');
+  removeButton.innerText = 'remove';
+  removeButton.type = 'button';
+
+  removeButton.addEventListener('click', function () {
+    let entry = removeButton.parentNode;
+    entry.remove();
+  });
+
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+
+  messageForm.reset();
+});

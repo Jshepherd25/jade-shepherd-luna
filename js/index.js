@@ -59,3 +59,42 @@ messageForm.addEventListener('submit', function (event) {
 
   messageForm.reset();
 });
+
+// Fetch Data From GitHub API
+fetch("https://api.github.com/users/Jshepherd25/repos")
+  .then(response => response.json())
+  .then(repositories => {
+    console.log("Repositories fetched:", repositories);
+
+    const projectSection = document.getElementById("Projects");
+    const projectList = projectSection.querySelector("ul");
+    projectList.innerHTML = "";
+
+    for (let i = 0; i < repositories.length; i++) {
+      const repo = repositories[i];
+
+      const projectCard = document.createElement("li");
+      projectCard.classList.add("project-card");
+
+      const link = document.createElement("a");
+      link.href = repo.html_url;
+      link.target = "_blank";
+      link.textContent = repo.name;
+      link.classList.add("project-link");
+
+      const desc = document.createElement("p");
+      desc.textContent = repo.description
+        ? repo.description
+        : "An ongoing spell in the making... ✨";
+      desc.classList.add("project-desc");
+
+      projectCard.appendChild(link);
+      projectCard.appendChild(desc);
+      projectList.appendChild(projectCard);
+    }
+  })
+  .catch(error => {
+    console.error("Error fetching repositories:", error);
+    const projectSection = document.getElementById("Projects");
+    projectSection.innerHTML = `<p style="color:white;">⚠️ Unable to load projects. Please try again later.</p>`;
+  });
